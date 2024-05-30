@@ -102,7 +102,10 @@ class DecompressionBombError(Exception):
 
 
 # Limit to around a quarter gigabyte for a 24-bit (3 bpp) image
-MAX_IMAGE_PIXELS = int(1024 * 1024 * 1024 // 4 // 3)
+# MAX_IMAGE_PIXELS = int(1024 * 1024 * 1024 // 4 // 3)
+
+# Remove pixel limit for large-scale images
+MAX_IMAGE_PIXELS = None
 
 
 try:
